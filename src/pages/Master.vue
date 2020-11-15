@@ -1,7 +1,7 @@
 <template>
 <div class="main-board">
-  <panel ref="panel" @clear="reset"></panel>
-  <paper-canvas ref="childCanvas"></paper-canvas>
+  <panel/>
+  <paper-canvas/>
 </div>
 </template>
 
@@ -21,12 +21,6 @@ export default {
     buttons: ['Simple', 'Separate', 'Replicated'],
     single: true
   }),
-
-  methods: {
-    reset() {
-      this.$refs.childCanvas.reset();
-    }
-  },
 }
 </script>
 

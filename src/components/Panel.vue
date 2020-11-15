@@ -4,6 +4,7 @@
       <div class="options-title">
         Colors
       </div>
+
       <div
         class="color"
         :style="`background-color: ${color.hex}`"
@@ -17,6 +18,7 @@
       <div class="options-title">
         Brush sizes
       </div>
+
       <div
         class="brush-size"
         :style="{
@@ -36,7 +38,12 @@ import { mapState, mapActions } from 'vuex'
 
 export default {
   computed: {
-    ...mapState(['colors', 'brushSizes', 'activeColor', 'activeBrushSize'])
+    ...mapState([
+      'colors',
+      'brushSizes',
+      'activeColor',
+      'activeBrushSize'
+    ])
   },
 
   methods: {

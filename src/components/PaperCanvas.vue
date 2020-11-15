@@ -1,17 +1,21 @@
 <template>
   <div class="canvas-wrapper">
-    <div class="title">DRAWING BOARD</div>
-    <div class="btn" @click="reset">
-      Clear Board
+    <div class="title">
+      DRAWING BOARD
     </div>
+
+    <div class="btn" @click="reset">
+      CLEAR BOARD
+    </div>
+
     <canvas id="canvas-one" class="canvas-style" @mousedown="mouseDown"/>
   </div>
 </template>
 
 <script>
-  const paper = require('paper');
+import paper from 'paper'
 
-  import { onMounted, reactive } from 'vue'
+import { onMounted, reactive } from 'vue'
 import { mapState } from 'vuex';
 
   export default ({
@@ -28,6 +32,7 @@ import { mapState } from 'vuex';
 
       pathCreate(scope) {
         scope.activate()
+
         return new paper.Path({
           strokeColor: this.activeColor,
           strokeJoin: 'circle',
