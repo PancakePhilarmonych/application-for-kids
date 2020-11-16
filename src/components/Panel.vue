@@ -6,7 +6,7 @@
       </div>
 
       <div
-        class="color"
+        class="option color"
         :style="`background-color: ${color.hex}`"
         :class="{'active': activeColorClass(color)}"
         v-for="color in colors"
@@ -20,7 +20,7 @@
       </div>
 
       <div
-        class="brush-size"
+        class="option brush-size"
         :style="{
           width: size.size + 'px',
           height: size.size + 'px'

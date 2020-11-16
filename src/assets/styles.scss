@@ -42,30 +42,25 @@ body {
       margin-bottom: 15px;
     }
 
-    .color {
-      margin-bottom: 10px;
+    .option {
+      margin-bottom: 15px;
       cursor: pointer;
-      width: 40px;
-      height: 40px;
-      border: 3px solid black;
       border-radius: 50%;
 
       &.active {
-        border: 3px solid white;
+        border: 5px solid white;
       }
     }
 
+    .color {
+      width: 40px;
+      height: 40px;
+      border: 3px solid black;
+    }
+
     .brush-size {
-      margin-bottom: 15px;
-      cursor: pointer;
       border: 1px solid rgb(20, 20, 20);
       background-color: rgb(20, 20, 20);
-      border-radius: 50px;
-
-      &.active {
-        border: 3px solid white;
-      }
-
     }
 
   }

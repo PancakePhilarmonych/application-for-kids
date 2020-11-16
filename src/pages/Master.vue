@@ -1,8 +1,8 @@
 <template>
-<div class="main-board">
-  <panel/>
-  <paper-canvas/>
-</div>
+  <div class="main-board">
+    <panel/>
+    <paper-canvas/>
+  </div>
 </template>
 
 <script>

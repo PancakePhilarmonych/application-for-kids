@@ -8,6 +8,10 @@
       CLEAR BOARD
     </div>
 
+    <div class="btn" @click="undo">
+      UNDO
+    </div>
+
     <canvas id="canvas-one" class="canvas-style" @mousedown="mouseDown"/>
   </div>
 </template>
@@ -21,13 +25,27 @@ import { mapState } from 'vuex';
   export default ({
     data: () => ({
       path: null,
-      scope: null,
       tool: null
     }),
+
+    setup() {
+      const state = reactive({
+        scope: null,
+      })
+
+      return {state}
+    },
 
     methods: {
       reset() {
         this.scope.project.activeLayer.removeChildren()
+      },
+
+      undo() {
+        this.scope.project.activeLayer.lastChild
+        ? this.scope.project.activeLayer.lastChild.remove()
+        : console.log('Is Empty')
+
       },
 
       pathCreate(scope) {
@@ -47,19 +65,19 @@ import { mapState } from 'vuex';
       },
 
       mouseDown() {
-        // create tool
+
         this.tool = this.createTool(this.scope);
 
         this.tool.onMouseDown = (event) => {
-            // init path
+
           this.path = this.pathCreate(this.scope);
-            // add point to path
+
           this.path.add(event.point);
-        };
+        }
 
         this.tool.onMouseDrag = (event) => {
           this.path.add(event);
-        };
+        }
 
         this.tool.onMouseUp = (event) => {
 
