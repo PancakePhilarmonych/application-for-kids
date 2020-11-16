@@ -67,7 +67,6 @@ import { mapState } from 'vuex';
       },
 
       mouseDown() {
-
         this.tool = this.createTool(this.scope);
 
         this.tool.onMouseDown = (event) => {
@@ -82,7 +81,6 @@ import { mapState } from 'vuex';
         }
 
         this.tool.onMouseUp = (event) => {
-
           this.path.simplify();
           this.path.add(event.point);
           this.tool = null

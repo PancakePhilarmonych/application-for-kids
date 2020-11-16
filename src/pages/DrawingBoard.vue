@@ -10,7 +10,7 @@ import PaperCanvas from '@/components/PaperCanvas'
 import Panel from '@/components/Panel'
 
 export default {
-  name: 'Master',
+  name: 'DrawingBoard',
 
   components: {
     PaperCanvas,
