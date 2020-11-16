@@ -83,6 +83,7 @@ import { mapState } from 'vuex';
 
         this.tool.onMouseUp = (event) => {
 
+          this.path.simplify();
           this.path.add(event.point);
           this.tool = null
         }
