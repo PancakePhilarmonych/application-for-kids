@@ -4,12 +4,14 @@
       DRAWING BOARD
     </div>
 
-    <div class="btn" @click="reset">
-      CLEAR BOARD
-    </div>
+    <div class="tools-board">
+      <div class="btn" @click="reset">
+        CLEAR BOARD
+      </div>
 
-    <div class="btn" @click="undo">
-      UNDO
+      <div class="btn btn-yellow" @click="undo">
+        UNDO
+      </div>
     </div>
 
     <canvas id="canvas-one" class="canvas-style" @mousedown="mouseDown"/>

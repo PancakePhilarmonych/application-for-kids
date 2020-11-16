@@ -1,4 +1,3 @@
-import '@/assets/styles.scss'
 import { createRouter, createWebHistory } from 'vue-router'
 import Master from '../pages/Master.vue'
 

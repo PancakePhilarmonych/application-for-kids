@@ -83,9 +83,33 @@ body {
   color: white;
   padding: 5px 10px;
   border-radius: 10px;
+  font-weight: bold;
 
   &:hover {
     background-color: lighten( #e84118, 10);
+  }
+
+  &-red {
+    background-color: $red;
+
+    &:hover {
+      background-color: lighten( $red, 10);
+    }
+  }
+
+  &-blue {
+    background-color: $blue;
+
+    &:hover {
+      background-color: lighten($blue, 10);
+    }
+  }
+
+  &-yellow {
+    background-color: $yellow;
+    &:hover {
+      background-color: lighten( $yellow, 10);
+    }
   }
 }
 
@@ -109,6 +133,10 @@ body {
      7px 7px 0px rgb(230, 33, 131),
      10px 10px 0px rgb(226, 230, 33),
      13px 13px 0px rgb(46, 33, 230);
+  }
+
+  .tools-board {
+    display: flex;
   }
 
   .btn {
