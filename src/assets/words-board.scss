@@ -20,7 +20,7 @@
   }
 
   .random-word {
-    margin-top: 50px;
+    margin-top: 80px;
     display: flex;
     justify-content: center;
 
@@ -42,7 +42,7 @@
   }
 
   .word-completed {
-    margin-top: 50px;
+    margin-top: 30px;
     display: flex;
     justify-content: center;
 
@@ -52,27 +52,24 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      letter-spacing: 10px;
       border-radius: 20px;
       background-color: #3eb1e2;
-
-
+      line-height: 10px;
       font-size: 140px;
-      font-weight: bold;
 
       min-width: 50%;
       height: 200px;
 
       color: rgb(255, 255, 255);
-      transition: all 0.3s ease-in-out;
+      transition: all 0.2s ease-in-out;
 
       &.completed {
-      color: rgb(255, 255, 255);
-        text-shadow: 4px 4px 0px rgb(23, 96, 156),
-    7px 7px 0px rgb(230, 33, 131),
-    10px 10px 0px rgb(226, 230, 33),
-    13px 13px 0px rgb(46, 33, 230);
-        font-size: 160px;
+        color: rgb(255, 255, 255);
+        text-shadow:  4px 4px 0px rgb(23, 96, 156),
+                      7px 7px 0px rgb(230, 33, 131),
+                      10px 10px 0px rgb(226, 230, 33),
+                      13px 13px 0px rgb(46, 33, 230);
+        font-size: 150px;
       }
     }
   }
