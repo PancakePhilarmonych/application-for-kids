@@ -123,7 +123,7 @@ export default {
       this.wWrod = this.words[randomIndex]
 
       this.wWordArray.forEach((el, index) => {
-        let j = Math.floor(Math.random() * index);
+        let j = Math.round(Math.random() * index);
         [this.wWordArray[index], this.wWordArray[j]] = [this.wWordArray[j], this.wWordArray[index]];
       })
 
