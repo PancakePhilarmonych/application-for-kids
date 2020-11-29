@@ -92,6 +92,7 @@ export default {
       'mirror',
       'cat',
       'dog',
+      'teacher',
       'mouse',
       'hamster',
       'corn'
@@ -144,10 +145,6 @@ export default {
   computed: {
     wordJoin() {
       return this.word.join('')
-    },
-
-    randomColor() {
-      return this.colors[Math.round(Math.random() * this.colors.length)]
     },
 
     wWordArray() {
