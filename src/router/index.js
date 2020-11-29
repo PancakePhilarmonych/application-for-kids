@@ -1,11 +1,18 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import DrawingBoard from '../pages/DrawingBoard.vue'
+import WordsBoard from '../pages/WordsBoard.vue'
 
 const routes = [
   {
     path: '/',
     name: 'DrawingBoard',
     component: DrawingBoard
+  },
+
+  {
+    path: '/words-board',
+    name: 'WordsBoard',
+    component: WordsBoard
   }
 ]
 
