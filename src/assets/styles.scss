@@ -12,6 +12,34 @@ body {
   background-color: #34ace0;
 }
 
+.navigation {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+
+  a {
+    text-decoration: none;
+  }
+  & > * {
+    color: #529dff;
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+
+    background-color: white;
+    border-radius: 20px;
+    padding: 8px 16px;
+    box-shadow: 2px 2px 4px $blue;
+
+    &:active {
+      color: $red;
+    }
+  }
+}
+
 .control-panel {
   justify-content: space-evenly;
   width: auto;

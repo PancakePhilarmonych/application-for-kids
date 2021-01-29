@@ -40,6 +40,10 @@
         <div class="button button-yellow" @click="back">
             UNDO
         </div>
+
+        <div class="button button-blue"  @click="next">
+          NEXT
+        </div>
       </template>
     </div>
 
