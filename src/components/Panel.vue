@@ -7,8 +7,8 @@
 
       <div
         class="option color"
-        :style="`background-color: ${color.hex}`"
-        :class="{'active': activeColorClass(color)}"
+        :style="brushColorStyle(color)"
+        :class="brushColorClasses(color)"
         v-for="color in colors"
         :key="color.id"
         @click="setActiveColor(color.hex)"/>
@@ -21,12 +21,9 @@
 
       <div
         class="option brush-size"
-        :style="{
-          width: size.size + 'px',
-          height: size.size + 'px'
-        }"
         v-for="size in brushSizes"
-        :class="{'active': activeBrushClass(size)}"
+        :style="brushSizeStyle(size)"
+        :class="brushSizeClasses(size)"
         :key="size.id"
         @click="setActiveBrushSize(size.size)"/>
     </div>
@@ -43,7 +40,8 @@ export default {
       'brushSizes',
       'activeColor',
       'activeBrushSize'
-    ])
+    ]),
+
   },
 
   methods: {
@@ -51,6 +49,25 @@ export default {
       setActiveColor: 'setActiveColor',
       setActiveBrushSize: 'setActiveBrushSize'
     }),
+
+    brushSizeStyle(size) {
+      return {
+        width: size.size + 'px',
+        height: size.size + 'px'
+      }
+    },
+
+    brushColorStyle(color) {
+      return `background-color: ${color.hex}`
+    },
+
+    brushSizeClasses(size) {
+      return { 'active': this.activeBrushClass(size) }
+    },
+
+    brushColorClasses(color) {
+      return {'active': this.activeColorClass(color)}
+    },
 
     activeColorClass(color) {
       return this.activeColor === color.hex
