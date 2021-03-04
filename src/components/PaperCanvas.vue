@@ -50,9 +50,7 @@ import { mapState } from 'vuex';
 
       },
 
-      pathCreate(scope) {
-        scope.activate()
-
+      pathCreate() {
         return new paper.Path({
           strokeColor: this.activeColor,
           strokeJoin: 'circle',
@@ -61,18 +59,14 @@ import { mapState } from 'vuex';
         })
       },
 
-      createTool(scope) {
-        scope.activate()
-        return new paper.Tool()
-      },
-
       mouseDown() {
-        this.tool = this.createTool(this.scope);
+        this.scope.activate()
+        this.tool = new paper.Tool()
 
         this.tool.onMouseDown = (event) => {
+          this.scope.activate()
 
-          this.path = this.pathCreate(this.scope);
-
+          this.path = this.pathCreate();
           this.path.add(event.point);
         }
 
